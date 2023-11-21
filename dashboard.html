@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Citra Abadi</title>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="#" class="logo">
+            <i class='bx bx-code-alt'></i>
+            <div class="logo-name"><span>Citra</span>Abadi</div>
+        </a>
+        <ul class="side-menu">
+            <li><a href="dashboard.html"><i class='bx bxs-dashboard'></i>Dashboard</a></li>
+            <li><a href="antrian.html"><i class='bx bx-message-square-dots'></i>Antrian</a></li>
+            <li><a href="jadwalpelayanan.html"><i class='bx bx-analyse'></i>Jadwal Pelayanan</a></li>
+            <li><a href="jadwaldokter.html"><i class='bx bx-group'></i>Jadwal Dokter</a></li>
+        </ul>
+        <ul class="side-menu">
+            <li>
+                <a href="#" class="logout">
+                    <i class='bx bx-log-out-circle'></i>
+                    Logout
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- End of Sidebar -->
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Navbar -->
+        <!-- <nav>
+            <i class='bx bx-menu'></i>
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="Search...">
+                    <button class="search-btn" type="submit"><i class='bx bx-search'></i></button>
+                </div>
+            </form>
+            <input type="checkbox" id="theme-toggle" hidden>
+            <label for="theme-toggle" class="theme-toggle"></label>
+            <a href="#" class="notif">
+                <i class='bx bx-bell'></i>
+                <span class="count">12</span>
+            </a>
+            <a href="#" class="profile">
+                <img src="images/logo.png">
+            </a>
+        </nav> -->
+
+        <!-- End of Navbar -->
+
+        <main>
+          <h1>Dashboard</h1>
+
+            <!-- Insights -->
+            <ul class="insights">
+                <li>
+                    <i class='bx bx-calendar-check'></i>
+                    <span class="info">
+                        <h3>
+                            1,074
+                        </h3>
+                        <p>Pasien Inap</p>
+                    </span>
+                </li>
+                <li><i class='bx bx-show-alt'></i>
+                    <span class="info">
+                        <h3>
+                            3,944
+                        </h3>
+                        <p>Pasien Rawat Jalan</p>
+                    </span>
+                </li>
+                <li><i class='bx bx-line-chart'></i>
+                    <span class="info">
+                        <h3>
+                            14,721
+                        </h3>
+                        <p>Pengunjung</p>
+                    </span>
+                </li>
+                <!-- <li><i class='bx bx-dollar-circle'></i>
+                    <span class="info">
+                        <h3>
+                            $6,742
+                        </h3>
+                        <p>Total Sales</p>
+                    </span>
+                </li> -->
+            </ul>
+            <!-- End of Insights -->
+
+            <div class="bottom-data">
+                <div class="c_frame23-frame">
+                    <div class="c_frame23-text">
+                        <p class="c_frame23-text01">Pasien</p>
+                    </div>
+                    <div class="c_frame23-text02">
+                        <p class="c_frame23-text03">7 days</p>
+                    </div>
+                    <canvas id="myLineChart" width="1023" height="175"></canvas>
+                    <div class="c_frame23-text04">
+                        <p class="c_frame23-text05">10/09/2023 - 17/09/2023</p>
+                    </div>
+                </div>
+                
+                <script>
+                    var ctx = document.getElementById('myLineChart').getContext('2d');
+                
+                    var data = {
+                        labels: ['Mon - 14', 'Tue - 15', 'Wed - 16', 'Thu - 17', 'Fri - 18', 'Sat - 19', 'Sun - 20'],
+                        datasets: [{
+                            label: 'Pasien Rawat Jalan',
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            borderWidth: 2,
+                            pointBackgroundColor: 'rgba(75, 192, 192, 1)',
+                            pointRadius: 5,
+                            data: [2212, 2122, 1980, 2305, 2150, 1956, 2078],
+                        }, {
+                            label: 'Pasien Rawat Inap',
+                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            borderWidth: 2,
+                            pointBackgroundColor: 'rgba(255, 99, 132, 1)',
+                            pointRadius: 5,
+                            data: [800, 900, 950, 1000, 1100, 1050, 900],
+                        }]
+                    };
+                
+                    var options = {
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 2500
+                            }
+                        },
+                        animation: {
+                            duration: 1500,
+                            easing: 'easeInOutQuart'
+                        },
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Grafik Pasien Harian'
+                            }
+                        }
+                    };
+                
+                    var myLineChart = new Chart(ctx, {
+                        type: 'line',
+                        data: data,
+                        options: options
+                    });
+                </script>
+                
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
