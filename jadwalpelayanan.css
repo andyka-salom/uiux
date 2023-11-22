@@ -167,6 +167,7 @@ body{
 
 .sidebar .side-menu li a.logout{
     color: var(--danger);
+    margin-top: 300px;
 }
 
 .content{
@@ -834,4 +835,7 @@ margin-top: 7%;
       margin-top: -4%;
     }
     
-  
+    .container-profil{
+        margin-left: 1230px;
+        
+    } 
