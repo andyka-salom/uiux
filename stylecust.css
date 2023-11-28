@@ -644,10 +644,16 @@ body{
 margin-left: -8%;
 margin-top: 7%;
 }
-
+.centered-image-landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+margin-left: -8%;
+margin-top: 6%;
+}
 .bigcontainer {
     display: flex;
-    flex-wrap: flex; 
+    flex-wrap: wrap; /* Added flex-wrap property */
     margin-top: 2%;
     margin-left: 1%;
     min-height: 645px;
@@ -1222,47 +1228,286 @@ input[type="submit"] {
 .doctor-option {
     margin-bottom: 16px;
 }
+.registration-container {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.step {
+    display: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    margin-top: 10px;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #007bb5;
+}
+.nomor-antrian-card {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.registration-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.registration-step {
+    display: block;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select, input[type="datetime-local"], input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.verifikasi-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.verifikasi-info label, .verifikasi-info input {
+    width: 48%;
+    margin-right: 2%;
+    box-sizing: border-box;
+}
+
+.nomor-antrian-card {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.nomor-antrian-card h3 {
+    margin: 0 0 10px;
+}
+.registration-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.registration-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.registration-step {
+    flex: 1;
+}
+
+.nomor-antrian-card {
+    flex: 1;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.nomor-antrian-card h3 {
+    margin: 0 0 10px;
+}
+
 .doctor-schedule {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 2000px;
+    margin: 50px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 20px;
 }
 
 .doctor-card {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    padding: 20px;
+    overflow: hidden;
     margin: 10px;
-    margin-left: 10px;
-    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 300px;
     
 }
 
 .doctor-image {
-
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
 }
 
-.doctor-details {
+.doctor-name {
+    text-align: center;
+    margin: 15px 0 10px;
+}
+
+.doctor-specialty {
+    text-align: center;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.available-hours,
+.unavailable-hours {
+    text-align: center;
+    color: #0c2d4e;
+    background-color: #3497F9;
+    display: inline-flex;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.availability-status {
+    text-align: center;
+}
+
+.availability-text {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.available {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.unavailable {
+    background-color: #e53935;
+    color: #fff;
+}
+
+.patient-info {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.patient-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.patient-details {
+    flex: 1;
+}
+
+.edit-button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.appointment-info {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.appointment-info p {
+    margin: 5px 0;
+}
+
+.edit-profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.edit-profile-form {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%; /* Menyesuaikan ukuran formulir dengan lebar layar */
+    max-width: 800px; /* Maksimum lebar formulir */
+    text-align: center;
+}
+
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.doctor-name {
+label {
+    margin-top: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
     margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.poli, .schedule, .availability-text {
-    margin: 5px 0;
-}
-
-.edit-button {
+button {
     background-color: #3498db;
     color: #fff;
     padding: 10px;
@@ -1270,75 +1515,27 @@ input[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
 }
-.kotak-jadwal{
-width: 100%;
-max-width: 199px;
-min-height: 30px;
-text-align: center;
-margin-bottom: 10px;
-background-color: #3497F9;
-}
 
-.kotak-ava{
+.c_selamat-datang-ada-text {
     width: 100%;
-    max-width: 199px;
-    min-height: 30px;
-    text-align: center;
-    margin-bottom: 10px;
-    background-color: #79CFA6;
-}
-
-
-.search {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
+    max-width: 808px;
+    margin-top: 0;
+    min-height: 169px;
+    text-align: left;
+    margin-bottom: 0;
   }
   
-  .search__input {
-    font-family: inherit;
-    font-size: inherit;
-    background-color: #f4f2f2;
-    border: none;
-    color: #646464;
-    padding: 0.7rem 1rem;
-    border-radius: 30px;
-    width: 12em;
-    transition: all ease-in-out .5s;
-    margin-right: -2rem;
-  }
-  
-  .search__input:hover, .search__input:focus {
-    box-shadow: 0 0 1em #00000013;
-  }
-  
-  .search__input:focus {
-    outline: none;
-    background-color: #f0eeee;
-  }
-  
-  .search__input::-webkit-input-placeholder {
-    font-weight: 100;
-    color: #ccc;
-  }
-  
-  .search__input:focus + .search__button {
-    background-color: #f0eeee;
-  }
-  
-  .search__button {
-    border: none;
-    background-color: #f4f2f2;
-    margin-top: .1em;
-  }
-  
-  .search__button:hover {
-    cursor: pointer;
-  }
-  
-  .search__icon {
-    height: 1.3em;
-    width: 1.3em;
-    fill: #b4b4b4;
+  .c_selamat-datang-ada-text1,
+  .c_selamat-datang-ada-text2 {
+    color: #000;
+    font-size: 65px;
+    font-style: normal;
+    margin-top: 0;
+    text-align: left;
+    font-family: "Hammersmith One",sans-serif;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 0;
+    letter-spacing: 0;
+    text-transform: none;
   }

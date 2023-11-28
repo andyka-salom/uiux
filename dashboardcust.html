@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="stylecust.css">
+    <title>Citra Abadi</title>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="landingcust.html" class="logo">
+            <i class='bx bx-plus-medical'></i>
+            <div class="logo-name"><span>Citra</span>Abadi</div>
+        </a>
+        <ul class="side-menu">
+            <li><a href="dashboardcust.html"><i class='bx bxs-dashboard'></i>Dashboard</a></li>
+            <li><a href="jadwaldoktercust.html"><i class='bx bx-group'></i>Jadwal Dokter</a></li>
+            <li><a href="pendaftaran.html"><i class='bx bx-analyse'></i>Pendaftaran</a></li>
+        </ul>
+        <ul class="side-menu">
+            <li>
+                <a href="#" class="logout">
+                    <i class='bx bx-log-out-circle'></i>
+                    Logout
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- End of Sidebar -->
+
+    <!-- Main Content -->
+    <div class="content">
+      <nav>
+        <div class="admin-profile">
+            <a href="#">
+                <li><i class='bx bx-user-circle'></i></li>
+                <span class="info">
+                    <h3>Herlina Nasution</h3>
+                </span>
+            </a>
+        </div>
+    </nav>
+<main>
+
+    <div class="bottom-data">
+        <div class="orders">
+            <div class="reminders">
+                <div class="header">
+                    <i class='bx bx-note'></i>
+                    <h3>Informasi Pendaftaran</h3>
+                </div>
+                <div class="appointment-info">
+                    <p class="queue-number">Nomor Antrean: 001</p>
+                    <p class="poli">Poli Tujuan: Umum</p>
+                    <p class="room">Ruang Poli: 101</p>
+                    <p class="schedule">Jam: 08:00 - 09:00</p>
+                    <p class="doctor">Dokter: Dr. Amanda Johnson</p>
+                </div>
+            </div>      
+        </div>
+        
+        <div class="reminders">
+            <div class="patient-details">
+                <img
+                    src="pasien.jpeg"
+                    alt="Pasien"
+                    width="203"
+                    height="212"
+                    class="c_rectangle459-rectangle rounded-image"
+                />
+                <div class="text-details">
+                    <p><strong>Nama:</strong> John Smith </p>
+                    <p><strong>Usia:</strong> 30 Tahun</p>
+                    <p><strong>Alamat:</strong> Surabaya</p>
+                    <p><strong>Email:</strong> John@gmail.com</p>
+                    <p><strong>Nomor Telp:</strong> 085 111 222 333</p>
+                    <a href="editprofilcust.html"><button class="edit-button">Edit</button></a>
+                    
+                </div>
+               
+            </div>
+        </div> 
+        
+            <div class="bottom-data">
+                <div class="orders">
+                    <div class="header">
+                        <i class='bx bx-note'></i>
+                        <h3>Riwayat Kunjungan</h3>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>               
+                                <th>Date</th>
+                                <th>Poli Tujuan</th>
+                                <th>Dokter</th>
+                                <th>keterangan</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>12 jan 2023</td>
+                                <td>Mata</td>
+                                <td>Dr Amar Rusmana</td>
+                                <td>iritasi mata</td>
+                                <td><span class="status completed">Belum Selesai</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+            
+         
+</main>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

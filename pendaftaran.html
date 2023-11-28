@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="stylecust.css">
+    <title>Citra Abadi</title>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="landingcust.html" class="logo">
+            <i class='bx bx-plus-medical'></i>
+            <div class="logo-name"><span>Citra</span>Abadi</div>
+        </a>
+        <ul class="side-menu">
+            <li><a href="dashboardcust.html"><i class='bx bxs-dashboard'></i>Dashboard</a></li>
+            <li><a href="jadwaldoktercust.html"><i class='bx bx-group'></i>Jadwal Dokter</a></li>
+            <li><a href="pendaftaran.html"><i class='bx bx-analyse'></i>Pendaftaran</a></li>
+        </ul>
+        <ul class="side-menu">
+            <li>
+                <a href="#" class="logout">
+                    <i class='bx bx-log-out-circle'></i>
+                    Logout
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- End of Sidebar -->
+
+    <!-- Main Content -->
+    <div class="content">
+      <nav>
+        <div class="admin-profile">
+            <a href="#">
+                <li><i class='bx bx-user-circle'></i></li>
+                <span class="info">
+                    <h3>Herlina Nasution</h3>
+                </span>
+            </a>
+        </div>
+    </nav>
+<main>
+
+    <div class="bottom-data">
+        <div class="orders">
+            <div class="header">
+                <i class='bx bx-receipt'></i>
+                <h3>Pendaftaran</h3>
+            </div>
+            <div class="registration-container">
+                <div class="registration-step" id="step1">
+                    <h2>Tahap 1: Pilih Poliklinik, Dokter, dan Jadwal</h2>
+                    <form>
+                        <label for="poliklinik">Pilih Poliklinik:</label>
+                        <select id="poliklinik" name="poliklinik">
+                            <option value="poliklinik1">Poliklinik 1</option>
+                            <option value="poliklinik2">Poliklinik 2</option>
+                            <!-- Tambahkan poliklinik lainnya sesuai kebutuhan -->
+                        </select>
+            
+                        <label for="dokter">Pilih Dokter:</label>
+                        <select id="dokter" name="dokter">
+                            <option value="dokter1">Dr. Amanda Johnson</option>
+                            <option value="dokter2">Dr. Michael Smith</option>
+                            <!-- Tambahkan dokter lainnya sesuai kebutuhan -->
+                        </select>
+            
+                        <label for="jadwal">Pilih Jadwal:</label>
+                        <input type="datetime-local" id="jadwal" name="jadwal">
+            
+                        <button type="button" onclick="nextStep()">Next</button>
+                    </form>
+                </div>
+            
+                <div class="registration-step" id="step2" style="display: none;">
+                    <h2>Tahap 2: Pilih Penjamin</h2>
+                    <form>
+                        <label for="nama-askes">Nama Askes:</label>
+                        <input type="text" id="nama-askes" name="nama-askes">
+            
+                        <label for="nomor-askes">Nomor Askes/BPJS:</label>
+                        <input type="text" id="nomor-askes" name="nomor-askes">
+            
+                        <button type="button" onclick="previousStep()">Previous</button>
+                        <button type="button" onclick="nextStep()">Next</button>
+                    </form>
+                </div>
+            
+                <div class="registration-step" id="step3" style="display: none;">
+                    <h2>Tahap 3: Verifikasi</h2>
+                    <div class="verifikasi-info">
+                        <label for="verifikasi-dokter">Dokter:</label>
+                        <input type="text" id="verifikasi-dokter" readonly>
+            
+                        <label for="verifikasi-poliklinik">Poliklinik:</label>
+                        <input type="text" id="verifikasi-poliklinik" readonly>
+            
+                        <label for="verifikasi-jadwal">Jadwal Tanggal dan Waktu:</label>
+                        <input type="text" id="verifikasi-jadwal" readonly>
+            
+                        <div class="nomor-antrian-card">
+                            <h3>Nomor Antrian</h3>
+                            <p id="verifikasi-nomor-antrian"></p>
+                        </div>
+            
+                        <button type="button" onclick="previousStep()">Previous</button>
+                        <button type="button" onclick="submitForm()">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            <script>
+                var currentStep = 1;
+            
+                function nextStep() {
+                    var currentStepElement = document.getElementById("step" + currentStep);
+                    currentStepElement.style.display = "none";
+            
+                    if (currentStep === 3) {
+                        // Proses verifikasi dan menampilkan informasi
+                        var poliklinik = document.getElementById("poliklinik").value;
+                        var dokter = document.getElementById("dokter").value;
+                        var jadwal = document.getElementById("jadwal").value;
+            
+                        var namaAskes = document.getElementById("nama-askes").value;
+                        var nomorAskes = document.getElementById("nomor-askes").value;
+            
+                        // Simulasi mendapatkan nomor antrian, ruang, dan jam
+                        var nomorAntrian = Math.floor(Math.random() * 100) + 1;
+                        var ruang = "Ruang 101"; // Ganti dengan logika sesuai kebutuhan
+                        var jam = "08:00 - 09:00"; // Ganti dengan logika sesuai kebutuhan
+            
+                        var verifikasiDokter = document.getElementById("verifikasi-dokter");
+                        var verifikasiPoliklinik = document.getElementById("verifikasi-poliklinik");
+                        var verifikasiJadwal = document.getElementById("verifikasi-jadwal");
+                        var verifikasiNomorAntrian = document.getElementById("verifikasi-nomor-antrian");
+            
+                        verifikasiDokter.value = dokter;
+                        verifikasiPoliklinik.value = poliklinik;
+                        verifikasiJadwal.value = jadwal;
+                        verifikasiNomorAntrian.innerText = "Nomor Antrian: " + nomorAntrian +
+                                                           " - Ruang: " + ruang +
+                                                           " - Jam: " + jam;
+                    } else {
+                        currentStep++;
+                        var nextStepElement = document.getElementById("step" + currentStep);
+                        nextStepElement.style.display = "block";
+                    }
+                }
+            
+                function previousStep() {
+                    var currentStepElement = document.getElementById("step" + currentStep);
+                    currentStepElement.style.display = "none";
+            
+                    if (currentStep > 1) {
+                        currentStep--;
+                    }
+            
+                    var previousStepElement = document.getElementById("step" + currentStep);
+                    previousStepElement.style.display = "block";
+                }
+            
+                function submitForm() {
+                    // Lakukan aksi submit form di sini
+                    alert("Form submitted successfully!");
+                }
+            </script>
+            
+
+        </main>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
