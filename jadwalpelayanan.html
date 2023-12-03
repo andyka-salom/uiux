@@ -46,87 +46,19 @@
             </a>
         </div>
     </nav>
-        <main>
+  <main>
+      <h1>Jadwal Pelayanan</h1>
 
-            <h1>jadwal Pelayanan</h1>
-              <div class="search">
-                <input type="text" class="search__input" placeholder="search">
-                <button class="search__button">
-                    <svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24">
-                        <g>
-                            <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
-                        </g>
-                    </svg>
-                </button>
-            </div>
-              <div class="bottom-data">
-                <div class="doctor-card">
-                    <img src="anak-removebg-preview.png" alt="Doctor 1" class="doctor-image">
-                    <div class="doctor-details">
-                        <p class="poli">Poli Anak</p>
-                      <div class ="kotak-jadwal">
-                        <p class="schedule">Senin, Rabu</p>
-                        <p class="schedule">08:00 - 12:00</p>
-                      </div>
-                      <p class="poli">Dr Amanda Johnson</p>
-                      <p class="poli">13.00-15.00</p>
-                      <div class="kotak-ava">
-                        <p class="availability-text available">Available</p>
-                      </div>
-                      <p class="poli">Dr. Andrew</p>
-                      <p class="poli">15.00-17.00</p>
-                      <div class="kotak-ava">
-                        <p class="availability-text available">Available</p>
-                      </div>
-                      <a href="editjadwalpelayanan.html" class="edit-button">Edit</a>
-                    </div>
-                </div>
-                <div class="doctor-card">
-                  <img src="orthopedi-removebg-preview.png" alt="Doctor 1" class="doctor-image">
-                  <div class="doctor-details">
-                      <p class="poli">Orthopedi</p>
-                    <div class ="kotak-jadwal">
-                      <p class="schedule">Senin, Rabu</p>
-                      <p class="schedule">08:00 - 12:00</p>
-                    </div>
-                    <p class="poli">Dr Amanda Johnson</p>
-                    <p class="poli">13.00-15.00</p>
-                    <div class="kotak-ava">
-                      <p class="availability-text available">Available</p>
-                    </div>
-                    <p class="poli">Dr. Andrew</p>
-                    <p class="poli">15.00-17.00</p>
-                    <div class="kotak-ava">
-                      <p class="availability-text available">Available</p>
-                    </div>
-                    <a href="editjadwalpelayanan.html" class="edit-button">Edit</a>
-                  </div>
-              </div>
-              <div class="doctor-card">
-                <img src="bedah-removebg-preview.png" alt="Doctor 1" class="doctor-image">
-                <div class="doctor-details">
-                    <p class="poli">Poli Bedah</p>
-                  <div class ="kotak-jadwal">
-                    <p class="schedule">Senin, Rabu</p>
-                    <p class="schedule">08:00 - 12:00</p>
-                  </div>
-                  <p class="poli">Dr Amanda Johnson</p>
-                  <p class="poli">13.00-15.00</p>
-                  <div class="kotak-ava">
-                    <p class="availability-text available">Available</p>
-                  </div>
-                  <p class="poli">Dr. Andrew</p>
-                  <p class="poli">15.00-17.00</p>
-                  <div class="kotak-ava">
-                    <p class="availability-text available">Available</p>
-                  </div>
-                  <a href="editjadwalpelayanan.html" class="edit-button">Edit</a>
-                </div>
-            </div>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="cari dokter" required>
+        <button onclick="searchByPoli()">Search</button>
+    </div>
+          <div class="bottom-data">
+            
             <div class="doctor-card">
-              <img src="poli anak.jpg " alt="Doctor 1" class="doctor-image">
+              <img src="anak-removebg-preview.png" alt="Doctor 1" class="doctor-image">
               <div class="doctor-details">
-                  <p class="poli">Poli Umum</p>
+                  <p class="poli">Poli Anak</p>
                 <div class ="kotak-jadwal">
                   <p class="schedule">Senin, Rabu</p>
                   <p class="schedule">08:00 - 12:00</p>
@@ -143,34 +75,291 @@
                 </div>
                 <a href="editjadwalpelayanan.html" class="edit-button">Edit</a>
               </div>
-          </div>
-          
-          <div class="doctor-card">
-            <img src="poli anak.jpg " alt="Doctor 1" class="doctor-image">
-            <div class="doctor-details">
-                <p class="poli">Poli Umum</p>
-              <div class ="kotak-jadwal">
-                <p class="schedule">Senin, Rabu</p>
-                <p class="schedule">08:00 - 12:00</p>
-              </div>
-              <p class="poli">Dr Amanda Johnson</p>
-              <p class="poli">13.00-15.00</p>
-              <div class="kotak-ava">
-                <p class="availability-text available">Available</p>
-              </div>
-              <p class="poli">Dr. Andrew</p>
-              <p class="poli">15.00-17.00</p>
-              <div class="kotak-ava">
-                <p class="availability-text available">Available</p>
-              </div>
-              <a href="editjadwalpelayanan.html" class="edit-button">Edit</a>
             </div>
-        </div>
-              </div>
-            
-</main>
 
-    </div>
+            <div class="doctor-card">
+              <img src="anak-removebg-preview.png" alt="Doctor 1" class="doctor-image">
+              <div class="doctor-details">
+                  <p class="poli">Poli Anak</p>
+                <div class ="kotak-jadwal">
+                  <p class="schedule">Senin, Rabu</p>
+                  <p class="schedule">08:00 - 12:00</p>
+                </div>
+                <p class="poli">Dr Amanda Johnson</p>
+                <p class="poli">13.00-15.00</p>
+                <div class="kotak-ava">
+                  <p class="availability-text available">Available</p>
+                </div>
+                <p class="poli">Dr. Andrew</p>
+                <p class="poli">15.00-17.00</p>
+                <div class="kotak-ava">
+                  <p class="availability-text available">Available</p>
+                </div>
+                <a href="editjadwalpelayanan.html" class="edit-button">Edit</a>
+              </div>
+            </div>
+
+            <div class="doctor-card">
+              <img src="anak-removebg-preview.png" alt="Doctor 1" class="doctor-image">
+              <div class="doctor-details">
+                  <p class="poli">Poli Anak</p>
+                <div class ="kotak-jadwal">
+                  <p class="schedule">Senin, Rabu</p>
+                  <p class="schedule">08:00 - 12:00</p>
+                </div>
+                <p class="poli">Dr Amanda Johnson</p>
+                <p class="poli">13.00-15.00</p>
+                <div class="kotak-ava">
+                  <p class="availability-text available">Available</p>
+                </div>
+                <p class="poli">Dr. Andrew</p>
+                <p class="poli">15.00-17.00</p>
+                <div class="kotak-ava">
+                  <p class="availability-text available">Available</p>
+                </div>
+                <a href="editjadwalpelayanan.html" class="edit-button">Edit</a>
+              </div>
+            </div>
+
+            <div class="doctor-card">
+              <img src="anak-removebg-preview.png" alt="Doctor 1" class="doctor-image">
+              <div class="doctor-details">
+                  <p class="poli">Poli Anak</p>
+                <div class ="kotak-jadwal">
+                  <p class="schedule">Senin, Rabu</p>
+                  <p class="schedule">08:00 - 12:00</p>
+                </div>
+                <p class="poli">Dr Amanda Johnson</p>
+                <p class="poli">13.00-15.00</p>
+                <div class="kotak-ava">
+                  <p class="availability-text available">Available</p>
+                </div>
+                <p class="poli">Dr. Andrew</p>
+                <p class="poli">15.00-17.00</p>
+                <div class="kotak-ava">
+                  <p class="availability-text available">Available</p>
+                </div>
+                <a href="editjadwalpelayanan.html" class="edit-button">Edit</a>
+              </div>
+            </div>
+
+            <div class="doctor-card">
+              <img src="anak-removebg-preview.png" alt="Doctor 1" class="doctor-image">
+              <div class="doctor-details">
+                  <p class="poli">Poli Anak</p>
+                <div class ="kotak-jadwal">
+                  <p class="schedule">Senin, Rabu</p>
+                  <p class="schedule">08:00 - 12:00</p>
+                </div>
+                <p class="poli">Dr Amanda Johnson</p>
+                <p class="poli">13.00-15.00</p>
+                <div class="kotak-ava">
+                  <p class="availability-text available">Available</p>
+                </div>
+                <p class="poli">Dr. Andrew</p>
+                <p class="poli">15.00-17.00</p>
+                <div class="kotak-ava">
+                  <p class="availability-text available">Available</p>
+                </div>
+                <a href="editjadwalpelayanan.html" class="edit-button">Edit</a>
+              </div>
+            </div>
+
+            <div class="doctor-card">
+              <img src="anak-removebg-preview.png" alt="Doctor 1" class="doctor-image">
+              <div class="doctor-details">
+                  <p class="poli">Poli Anak</p>
+                <div class ="kotak-jadwal">
+                  <p class="schedule">Senin, Rabu</p>
+                  <p class="schedule">08:00 - 12:00</p>
+                </div>
+                <p class="poli">Dr Amanda Johnson</p>
+                <p class="poli">13.00-15.00</p>
+                <div class="kotak-ava">
+                  <p class="availability-text available">Available</p>
+                </div>
+                <p class="poli">Dr. Andrew</p>
+                <p class="poli">15.00-17.00</p>
+                <div class="kotak-ava">
+                  <p class="availability-text available">Available</p>
+                </div>
+                <a href="editjadwalpelayanan.html" class="edit-button">Edit</a>
+              </div>
+            </div>
+            <div class="doctor-card">
+              <img src="anak-removebg-preview.png" alt="Doctor 1" class="doctor-image">
+              <div class="doctor-details">
+                  <p class="poli">Poli Anak</p>
+                <div class ="kotak-jadwal">
+                  <p class="schedule">Senin, Rabu</p>
+                  <p class="schedule">08:00 - 12:00</p>
+                </div>
+                <p class="poli">Dr Amanda Johnson</p>
+                <p class="poli">13.00-15.00</p>
+                <div class="kotak-ava">
+                  <p class="availability-text available">Available</p>
+                </div>
+                <p class="poli">Dr. Andrew</p>
+                <p class="poli">15.00-17.00</p>
+                <div class="kotak-ava">
+                  <p class="availability-text available">Available</p>
+                </div>
+                <a href="editjadwalpelayanan.html" class="edit-button">Edit</a>
+              </div>
+            </div>
+            <div class="doctor-card">
+              <img src="anak-removebg-preview.png" alt="Doctor 1" class="doctor-image">
+              <div class="doctor-details">
+                  <p class="poli">Poli Anak</p>
+                <div class ="kotak-jadwal">
+                  <p class="schedule">Senin, Rabu</p>
+                  <p class="schedule">08:00 - 12:00</p>
+                </div>
+                <p class="poli">Dr Amanda Johnson</p>
+                <p class="poli">13.00-15.00</p>
+                <div class="kotak-ava">
+                  <p class="availability-text available">Available</p>
+                </div>
+                <p class="poli">Dr. Andrew</p>
+                <p class="poli">15.00-17.00</p>
+                <div class="kotak-ava">
+                  <p class="availability-text available">Available</p>
+                </div>
+                <a href="editjadwalpelayanan.html" class="edit-button">Edit</a>
+              </div>
+            </div>
+            <div class="doctor-card">
+              <img src="anak-removebg-preview.png" alt="Doctor 1" class="doctor-image">
+              <div class="doctor-details">
+                  <p class="poli">Poli Anak</p>
+                <div class ="kotak-jadwal">
+                  <p class="schedule">Senin, Rabu</p>
+                  <p class="schedule">08:00 - 12:00</p>
+                </div>
+                <p class="poli">Dr Amanda Johnson</p>
+                <p class="poli">13.00-15.00</p>
+                <div class="kotak-ava">
+                  <p class="availability-text available">Available</p>
+                </div>
+                <p class="poli">Dr. Andrew</p>
+                <p class="poli">15.00-17.00</p>
+                <div class="kotak-ava">
+                  <p class="availability-text available">Available</p>
+                </div>
+                <a href="editjadwalpelayanan.html" class="edit-button">Edit</a>
+              </div>
+            </div>
+            <div class="doctor-card">
+              <img src="anak-removebg-preview.png" alt="Doctor 1" class="doctor-image">
+              <div class="doctor-details">
+                  <p class="poli">Poli Anak</p>
+                <div class ="kotak-jadwal">
+                  <p class="schedule">Senin, Rabu</p>
+                  <p class="schedule">08:00 - 12:00</p>
+                </div>
+                <p class="poli">Dr Amanda Johnson</p>
+                <p class="poli">13.00-15.00</p>
+                <div class="kotak-ava">
+                  <p class="availability-text available">Available</p>
+                </div>
+                <p class="poli">Dr. Andrew</p>
+                <p class="poli">15.00-17.00</p>
+                <div class="kotak-ava">
+                  <p class="availability-text available">Available</p>
+                </div>
+                <a href="editjadwalpelayanan.html" class="edit-button">Edit</a>
+              </div>
+            </div>
+            <div class="doctor-card">
+              <img src="anak-removebg-preview.png" alt="Doctor 1" class="doctor-image">
+              <div class="doctor-details">
+                  <p class="poli">Poli Anak</p>
+                <div class ="kotak-jadwal">
+                  <p class="schedule">Senin, Rabu</p>
+                  <p class="schedule">08:00 - 12:00</p>
+                </div>
+                <p class="poli">Dr Amanda Johnson</p>
+                <p class="poli">13.00-15.00</p>
+                <div class="kotak-ava">
+                  <p class="availability-text available">Available</p>
+                </div>
+                <p class="poli">Dr. Andrew</p>
+                <p class="poli">15.00-17.00</p>
+                <div class="kotak-ava">
+                  <p class="availability-text available">Available</p>
+                </div>
+                <a href="editjadwalpelayanan.html" class="edit-button">Edit</a>
+              </div>
+            </div>
+          </div>
+    
+    <div class="pagination-buttons">
+      <button onclick="previousPage()">Previous</button>
+      <button onclick="goToPage(1)">1</button>
+      <button onclick="goToPage(2)">2</button>
+      <button onclick="goToPage(3)">3</button>
+      <button onclick="nextPage()">Next</button>
+  </div>
+  </div>
+    
+  </main>
+  
+</div>
+
+<script src="index.js"></script>
+<script>
+  var currentPage = 1; 
+  var itemsPerPage = 5; 
+  var doctorCards = document.querySelectorAll('.doctor-card');
+
+  function showPage(page) {
+      for (var i = 0; i < doctorCards.length; i++) {
+          doctorCards[i].style.display = 'none';
+      }
+
+      var startIndex = (page - 1) * itemsPerPage;
+      var endIndex = startIndex + itemsPerPage;
+
+      for (var j = startIndex; j < endIndex && j < doctorCards.length; j++) {
+          doctorCards[j].style.display = 'block';
+      }
+  }
+
+  function goToPage(page) {
+      currentPage = page;
+      showPage(currentPage);
+  }
+
+  function nextPage() {
+      if (currentPage < Math.ceil(doctorCards.length / itemsPerPage)) {
+          currentPage++;
+          showPage(currentPage);
+      }
+  }
+
+  function previousPage() {
+      if (currentPage > 1) {
+          currentPage--;
+          showPage(currentPage);
+      }
+  }
+
+  function searchByPoli() {
+      var searchInput = document.getElementById('searchInput').value.toLowerCase();
+      var poliElements = document.querySelectorAll('.doctor-card .poli');
+
+      doctorCards.forEach(function (card) {
+          var poliText = card.querySelector('.poli').innerText.toLowerCase();
+
+          if (poliText.includes(searchInput)) {
+              card.style.display = 'block';
+          } else {
+              card.style.display = 'none';
+          }
+      });
+  }
+  showPage(currentPage);
+</script>
 
     <script src="index.js"></script>
 </body>

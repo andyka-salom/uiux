@@ -44,16 +44,111 @@
                 </span>
             </a>
         </div>
-    </nav>
-<main>
-    <div class="bottom-data">
-        <div class="orders">
-            <div class="header">
-                <i class='bx bx-list-ul'></i>
-                <h3>Jadwal Dokter</h3>
-            </div>
-            <div class="doctor-schedule">
+    </nav>      
+<main>    
+        <div class="bottom-data">
+           
+            <div class="orders">
+                <div class="header">
+                    <i class='bx bx-list-ul'></i>
+                    <h3>Jadwal Dokter</h3>
+                    <div class="search-bar">
+                        <input type="text" id="searchInput" placeholder="cari dokter" required>
+                        <button onclick="searchDoctor()">Search</button>
+                    </div>
+                </div>
                 
+                <div class="doctor-schedule">
+                    <div class="doctor-card">
+                        <img src="dokterhijab.jpeg" alt="Doctor 3" class="doctor-image">
+                        <h3 class="doctor-name">Dr. Reni Sulistyowati</h3>
+                        <p class="doctor-specialty">Poli Kandungan</p>
+                        <div class="availability-status">
+                            <p class="available-hours">08:00 - 12:00</p>
+                            <p class="availability-text available">Available</p>
+                        </div>
+                        <div class="availability-status">
+                            <p class="unavailable-hours">14:00 - 18:00</p>
+                            <p class="availability-text unavailable">Unavailable</p>
+                        </div>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="sebelumlogin/images/team-image1.jpg" alt="Doctor 4" class="doctor-image">
+                        <h3 class="doctor-name">Dr. Johnson</h3>
+                        <p class="doctor-specialty">Poli Anak</p>
+                        <div class="availability-status">
+                            <p class="available-hours">08:00 - 12:00</p>
+                            <p class="availability-text available">Available</p>
+                        </div>
+                        <div class="availability-status">
+                            <p class="unavailable-hours">14:00 - 18:00</p>
+                            <p class="availability-text unavailable">Unavailable</p>
+                        </div>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="doktercewe.jpeg" alt="Doctor 1" class="doctor-image">
+                        <h3 class="doctor-name">Dr. Amanda Johnson</h3>
+                        <p class="doctor-specialty">Poli Umum</p>
+                        <div class="availability-status">
+                          <p class="available-hours">08:00 - 12:00</p>
+                          <p class="availability-text available">Available</p>
+                      </div>
+                      <div class="availability-status">
+                          <p class="unavailable-hours">14:00 - 18:00</p>
+                          <p class="availability-text unavailable">Unavailable</p>
+                      </div>
+                    </div>
+                
+                    <div class="doctor-card">
+                      <img src="dokterlaki.jpeg" alt="Doctor 2" class="doctor-image">
+                      <h3 class="doctor-name">Dr. Michael Smith</h3>
+                      <p class="doctor-specialty">Poli Gigi</p>
+                      <div class="availability-status">
+                          <p class="available-hours">08:00 - 12:00</p>
+                          <p class="availability-text available">Available</p>
+                      </div>
+                      <div class="availability-status">
+                          <p class="unavailable-hours">14:00 - 18:00</p>
+                          <p class="availability-text unavailable">Unavailable</p>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <img src="dokterhijab.jpeg" alt="Doctor 1" class="doctor-image">
+                    <h3 class="doctor-name">Dr. Reni sulistyowati</h3>
+                    <p class="doctor-specialty">Poli Kandungan</p>
+                    <div class="availability-status">
+                      <p class="available-hours">08:00 - 12:00</p>
+                      <p class="availability-text available">Available</p>
+                  </div>
+                  <div class="availability-status">
+                      <p class="unavailable-hours">14:00 - 18:00</p>
+                      <p class="availability-text unavailable">Unavailable</p>
+                  </div>
+                </div><div class="doctor-card">
+                    <img src="sebelumlogin/images/team-image1.jpg" alt="Doctor 1" class="doctor-image">
+                    <h3 class="doctor-name">Dr. Johnson</h3>
+                    <p class="doctor-specialty">Poli Anak</p>
+                    <div class="availability-status">
+                      <p class="available-hours">08:00 - 12:00</p>
+                      <p class="availability-text available">Available</p>
+                  </div>
+                  <div class="availability-status">
+                      <p class="unavailable-hours">14:00 - 18:00</p>
+                      <p class="availability-text unavailable">Unavailable</p>
+                  </div>
+                </div><div class="doctor-card">
+                    <img src="sebelumlogin/images/team-image3.jpg" alt="Doctor 1" class="doctor-image">
+                    <h3 class="doctor-name">Dr. bonita</h3>
+                    <p class="doctor-specialty">Poli Umum</p>
+                    <div class="availability-status">
+                      <p class="available-hours">08:00 - 12:00</p>
+                      <p class="availability-text available">Available</p>
+                  </div>
+                  <div class="availability-status">
+                      <p class="unavailable-hours">14:00 - 18:00</p>
+                      <p class="availability-text unavailable">Unavailable</p>
+                  </div>
+                </div>
                 <div class="doctor-card">
                     <img src="doktercewe.jpeg" alt="Doctor 1" class="doctor-image">
                     <h3 class="doctor-name">Dr. Amanda Johnson</h3>
@@ -67,126 +162,126 @@
                       <p class="availability-text unavailable">Unavailable</p>
                   </div>
                 </div>
-            
                 <div class="doctor-card">
-                  <img src="dokterlaki.jpeg" alt="Doctor 2" class="doctor-image">
-                  <h3 class="doctor-name">Dr. Michael Smith</h3>
-                  <p class="doctor-specialty">Poli Gigi</p>
-                  <div class="availability-status">
+                    <img src="doktercewe.jpeg" alt="Doctor 1" class="doctor-image">
+                    <h3 class="doctor-name">Dr. Amanda Johnson</h3>
+                    <p class="doctor-specialty">Poli Umum</p>
+                    <div class="availability-status">
                       <p class="available-hours">08:00 - 12:00</p>
                       <p class="availability-text available">Available</p>
                   </div>
                   <div class="availability-status">
                       <p class="unavailable-hours">14:00 - 18:00</p>
                       <p class="availability-text unavailable">Unavailable</p>
+                  </div>
+                </div> 
+              <div class="doctor-card">
+                    <img src="doktercewe.jpeg" alt="Doctor 1" class="doctor-image">
+                    <h3 class="doctor-name">Dr. Amanda Johnson</h3>
+                    <p class="doctor-specialty">Poli Umum</p>
+                    <div class="availability-status">
+                      <p class="available-hours">08:00 - 12:00</p>
+                      <p class="availability-text available">Available</p>
+                  </div>
+                  <div class="availability-status">
+                      <p class="unavailable-hours">14:00 - 18:00</p>
+                      <p class="availability-text unavailable">Unavailable</p>
+                  </div>
                 </div>
+                <div class="doctor-card">
+                    <img src="doktercewe.jpeg" alt="Doctor 1" class="doctor-image">
+                    <h3 class="doctor-name">Dr. Amanda Johnson</h3>
+                    <p class="doctor-specialty">Poli Umum</p>
+                    <div class="availability-status">
+                      <p class="available-hours">08:00 - 12:00</p>
+                      <p class="availability-text available">Available</p>
+                  </div>
+                  <div class="availability-status">
+                      <p class="unavailable-hours">14:00 - 18:00</p>
+                      <p class="availability-text unavailable">Unavailable</p>
+                  </div>
+                </div><div class="doctor-card">
+                    <img src="doktercewe.jpeg" alt="Doctor 1" class="doctor-image">
+                    <h3 class="doctor-name">Dr. Amanda Johnson</h3>
+                    <p class="doctor-specialty">Poli Umum</p>
+                    <div class="availability-status">
+                      <p class="available-hours">08:00 - 12:00</p>
+                      <p class="availability-text available">Available</p>
+                  </div>
+                  <div class="availability-status">
+                      <p class="unavailable-hours">14:00 - 18:00</p>
+                      <p class="availability-text unavailable">Unavailable</p>
+                  </div>
+                </div>
+                
             </div>
-            <div class="doctor-card">
-                <img src="doktercewe.jpeg" alt="Doctor 1" class="doctor-image">
-                <h3 class="doctor-name">Dr. Amanda Johnson</h3>
-                <p class="doctor-specialty">Poli Umum</p>
-                <div class="availability-status">
-                  <p class="available-hours">08:00 - 12:00</p>
-                  <p class="availability-text available">Available</p>
-              </div>
-              <div class="availability-status">
-                  <p class="unavailable-hours">14:00 - 18:00</p>
-                  <p class="availability-text unavailable">Unavailable</p>
-              </div>
-            </div><div class="doctor-card">
-                <img src="doktercewe.jpeg" alt="Doctor 1" class="doctor-image">
-                <h3 class="doctor-name">Dr. Amanda Johnson</h3>
-                <p class="doctor-specialty">Poli Umum</p>
-                <div class="availability-status">
-                  <p class="available-hours">08:00 - 12:00</p>
-                  <p class="availability-text available">Available</p>
-              </div>
-              <div class="availability-status">
-                  <p class="unavailable-hours">14:00 - 18:00</p>
-                  <p class="availability-text unavailable">Unavailable</p>
-              </div>
-            </div><div class="doctor-card">
-                <img src="doktercewe.jpeg" alt="Doctor 1" class="doctor-image">
-                <h3 class="doctor-name">Dr. Amanda Johnson</h3>
-                <p class="doctor-specialty">Poli Umum</p>
-                <div class="availability-status">
-                  <p class="available-hours">08:00 - 12:00</p>
-                  <p class="availability-text available">Available</p>
-              </div>
-              <div class="availability-status">
-                  <p class="unavailable-hours">14:00 - 18:00</p>
-                  <p class="availability-text unavailable">Unavailable</p>
-              </div>
+            <div class="pagination-buttons">
+                <button onclick="previousPage()">Previous</button>
+                <button onclick="goToPage(1)">1</button>
+                <button onclick="goToPage(2)">2</button>
+                <button onclick="goToPage(3)">3</button>
+                <button onclick="nextPage()">Next</button>
             </div>
-            <div class="doctor-card">
-                <img src="doktercewe.jpeg" alt="Doctor 1" class="doctor-image">
-                <h3 class="doctor-name">Dr. Amanda Johnson</h3>
-                <p class="doctor-specialty">Poli Umum</p>
-                <div class="availability-status">
-                  <p class="available-hours">08:00 - 12:00</p>
-                  <p class="availability-text available">Available</p>
-              </div>
-              <div class="availability-status">
-                  <p class="unavailable-hours">14:00 - 18:00</p>
-                  <p class="availability-text unavailable">Unavailable</p>
-              </div>
-            </div>
-            <div class="doctor-card">
-                <img src="doktercewe.jpeg" alt="Doctor 1" class="doctor-image">
-                <h3 class="doctor-name">Dr. Amanda Johnson</h3>
-                <p class="doctor-specialty">Poli Umum</p>
-                <div class="availability-status">
-                  <p class="available-hours">08:00 - 12:00</p>
-                  <p class="availability-text available">Available</p>
-              </div>
-              <div class="availability-status">
-                  <p class="unavailable-hours">14:00 - 18:00</p>
-                  <p class="availability-text unavailable">Unavailable</p>
-              </div>
-            </div>
-            <div class="doctor-card">
-                <img src="doktercewe.jpeg" alt="Doctor 1" class="doctor-image">
-                <h3 class="doctor-name">Dr. Amanda Johnson</h3>
-                <p class="doctor-specialty">Poli Umum</p>
-                <div class="availability-status">
-                  <p class="available-hours">08:00 - 12:00</p>
-                  <p class="availability-text available">Available</p>
-              </div>
-              <div class="availability-status">
-                  <p class="unavailable-hours">14:00 - 18:00</p>
-                  <p class="availability-text unavailable">Unavailable</p>
-              </div>
-            </div>
-            <div class="doctor-card">
-                <img src="doktercewe.jpeg" alt="Doctor 1" class="doctor-image">
-                <h3 class="doctor-name">Dr. Amanda Johnson</h3>
-                <p class="doctor-specialty">Poli Umum</p>
-                <div class="availability-status">
-                  <p class="available-hours">08:00 - 12:00</p>
-                  <p class="availability-text available">Available</p>
-              </div>
-              <div class="availability-status">
-                  <p class="unavailable-hours">14:00 - 18:00</p>
-                  <p class="availability-text unavailable">Unavailable</p>
-              </div>
-            </div><div class="doctor-card">
-                <img src="doktercewe.jpeg" alt="Doctor 1" class="doctor-image">
-                <h3 class="doctor-name">Dr. Amanda Johnson</h3>
-                <p class="doctor-specialty">Poli Umum</p>
-                <div class="availability-status">
-                  <p class="available-hours">08:00 - 12:00</p>
-                  <p class="availability-text available">Available</p>
-              </div>
-              <div class="availability-status">
-                  <p class="unavailable-hours">14:00 - 18:00</p>
-                  <p class="availability-text unavailable">Unavailable</p>
-              </div>
-           
+        </div>
+    </div>
 </main>
 
-    </div>
+<script>
+    var currentPage = 1; // Ganti dengan halaman yang sesuai
+    var itemsPerPage = 5; // Sesuaikan dengan jumlah kartu dokter yang ingin ditampilkan per halaman
+    var doctorCards = document.querySelectorAll('.doctor-card');
 
-    <script src="index.js"></script>
+    function showPage(page) {
+        for (var i = 0; i < doctorCards.length; i++) {
+            doctorCards[i].style.display = 'none';
+        }
+
+        var startIndex = (page - 1) * itemsPerPage;
+        var endIndex = startIndex + itemsPerPage;
+
+        for (var j = startIndex; j < endIndex && j < doctorCards.length; j++) {
+            doctorCards[j].style.display = 'block';
+        }
+    }
+
+    function goToPage(page) {
+        currentPage = page;
+        showPage(currentPage);
+    }
+
+    function nextPage() {
+        if (currentPage < Math.ceil(doctorCards.length / itemsPerPage)) {
+            currentPage++;
+            showPage(currentPage);
+        }
+    }
+
+    function previousPage() {
+        if (currentPage > 1) {
+            currentPage--;
+            showPage(currentPage);
+        }
+    }
+
+    function searchDoctor() {
+        var searchInput = document.getElementById('searchInput').value.toLowerCase();
+
+        for (var i = 0; i < doctorCards.length; i++) {
+            var doctorName = doctorCards[i].querySelector('.doctor-name').innerText.toLowerCase();
+
+            if (doctorName.includes(searchInput)) {
+                doctorCards[i].style.display = 'block';
+            } else {
+                doctorCards[i].style.display = 'none';
+            }
+        }
+    }
+
+    // Tampilkan halaman kedua saat halaman dimuat
+    showPage(currentPage);
+</script>
+</div>
+
+<script src="index.js"></script>
 </body>
-
 </html>

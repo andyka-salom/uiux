@@ -1539,3 +1539,34 @@ button {
     letter-spacing: 0;
     text-transform: none;
   }
+  .doctor-card {
+    flex-basis: calc(20% - 20px);
+    margin: 10px;
+}
+
+@media (max-width: 768px) {
+    .doctor-card {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    margin-right: 10px;
+}
+.search-bar button {
+    background-color: white; 
+    color: #333;
+    border: 1px solid #ccc; 
+    padding: 8px 12px; Padding tombol
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+.search-bar button:hover {
+    background-color: #f0f0f0; 
+}
