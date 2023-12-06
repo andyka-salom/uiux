@@ -1404,6 +1404,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 2px;
 }
 
 /* Style untuk input text dan tanggal */
@@ -1453,4 +1454,7 @@ input[type="date"] {
 
 .pagination-buttons {
     margin-top: 20px;
+}
+.nomor-antrian-card{
+    border-style: 2px solid #000;
 }

@@ -104,10 +104,7 @@
                         <label for="verifikasi-jadwal">Jadwal Tanggal dan Waktu:</label>
                         <input type="text" id="verifikasi-jadwal" readonly>
             
-                        <div class="nomor-antrian-card">
-                            <h3>Nomor Antrian</h3>
-                            <p id="verifikasi-nomor-antrian"></p>
-                        </div>
+                        
             
                         <button type="button" onclick="previousStep()">Previous</button>
                         <button type="button" onclick="submitForm()">Submit</button>
@@ -116,62 +113,104 @@
             </div>
         </div>
     </div>
-            <script>
-                var currentStep = 1;
-            
-                function nextStep() {
-                    var currentStepElement = document.getElementById("step" + currentStep);
-                    currentStepElement.style.display = "none";
-            
-                    if (currentStep === 3) {
-                        // Proses verifikasi dan menampilkan informasi
-                        var poliklinik = document.getElementById("poliklinik").value;
-                        var dokter = document.getElementById("dokter").value;
-                        var jadwal = document.getElementById("jadwal").value;
-            
-                        var namaAskes = document.getElementById("nama-askes").value;
-                        var nomorAskes = document.getElementById("nomor-askes").value;
-            
-                        // Simulasi mendapatkan nomor antrian, ruang, dan jam
-                        var nomorAntrian = Math.floor(Math.random() * 100) + 1;
-                        var ruang = "Ruang 101"; // Ganti dengan logika sesuai kebutuhan
-                        var jam = "08:00 - 09:00"; // Ganti dengan logika sesuai kebutuhan
-            
-                        var verifikasiDokter = document.getElementById("verifikasi-dokter");
-                        var verifikasiPoliklinik = document.getElementById("verifikasi-poliklinik");
-                        var verifikasiJadwal = document.getElementById("verifikasi-jadwal");
-                        var verifikasiNomorAntrian = document.getElementById("verifikasi-nomor-antrian");
-            
-                        verifikasiDokter.value = dokter;
-                        verifikasiPoliklinik.value = poliklinik;
-                        verifikasiJadwal.value = jadwal;
-                        verifikasiNomorAntrian.innerText = "Nomor Antrian: " + nomorAntrian +
-                                                           " - Ruang: " + ruang +
-                                                           " - Jam: " + jam;
-                    } else {
-                        currentStep++;
-                        var nextStepElement = document.getElementById("step" + currentStep);
-                        nextStepElement.style.display = "block";
-                    }
+    <script>
+        var currentStep = 1;
+    
+        function nextStep() {
+            var currentStepElement = document.getElementById("step" + currentStep);
+    
+            if (currentStep === 1) {
+                // Validate step 1
+                var poliklinik = document.getElementById("poliklinik").value;
+                var dokter = document.getElementById("dokter").value;
+                var jadwal = document.getElementById("jadwal").value;
+    
+                if (!poliklinik || !dokter || !jadwal) {
+                    alert("Please fill in all fields in Step 1.");
+                    return;
                 }
-            
-                function previousStep() {
-                    var currentStepElement = document.getElementById("step" + currentStep);
-                    currentStepElement.style.display = "none";
-            
-                    if (currentStep > 1) {
-                        currentStep--;
-                    }
-            
-                    var previousStepElement = document.getElementById("step" + currentStep);
-                    previousStepElement.style.display = "block";
+            } else if (currentStep === 2) {
+                // Validate step 2
+                var namaAskes = document.getElementById("nama-askes").value;
+                var nomorAskes = document.getElementById("nomor-askes").value;
+    
+                if (!namaAskes || !nomorAskes) {
+                    alert("Please fill in all fields in Step 2.");
+                    return;
                 }
-            
-                function submitForm() {
-                    // Lakukan aksi submit form di sini
-                    alert("Form submitted successfully!");
-                }
-            </script>
+            }
+    
+            currentStepElement.style.display = "none";
+    
+            if (currentStep === 3) {
+                // Display results in step 3
+                var poliklinik = document.getElementById("poliklinik").value;
+                var dokter = document.getElementById("dokter").value;
+                var jadwal = document.getElementById("jadwal").value;
+    
+                var namaAskes = document.getElementById("nama-askes").value;
+                var nomorAskes = document.getElementById("nomor-askes").value;
+    
+                // Simulasi mendapatkan nomor antrian, ruang, dan jam
+                var nomorAntrian = Math.floor(Math.random() * 100) + 1;
+                var ruang = "Ruang 101"; // Ganti dengan logika sesuai kebutuhan
+                var jam = "08:00 - 09:00"; // Ganti dengan logika sesuai kebutuhan
+    
+                var verifikasiDokter = document.getElementById("verifikasi-dokter");
+                var verifikasiPoliklinik = document.getElementById("verifikasi-poliklinik");
+                var verifikasiJadwal = document.getElementById("verifikasi-jadwal");
+                var verifikasiNomorAntrian = document.getElementById("verifikasi-nomor-antrian");
+    
+                // Update displayed information in step 3
+                verifikasiDokter.value = dokter;
+                verifikasiPoliklinik.value = poliklinik;
+                verifikasiJadwal.value = jadwal;
+                verifikasiNomorAntrian.innerText = "Nomor Antrian: " + nomorAntrian +
+                    " - Ruang: " + ruang +
+                    " - Jam: " + jam;
+    
+                // Display user input from steps 1 and 2
+                var verifikasiNamaAskes = document.getElementById("verifikasi-nama-askes");
+                var verifikasiNomorAskes = document.getElementById("verifikasi-nomor-askes");
+    
+                verifikasiNamaAskes.innerText = "Nama Askes: " + namaAskes;
+                verifikasiNomorAskes.innerText = "Nomor Askes/BPJS: " + nomorAskes;
+            } else {
+                currentStep++;
+                var nextStepElement = document.getElementById("step" + currentStep);
+                nextStepElement.style.display = "block";
+            }
+        }
+    
+        function previousStep() {
+            var currentStepElement = document.getElementById("step" + currentStep);
+            currentStepElement.style.display = "none";
+    
+            if (currentStep > 1) {
+                currentStep--;
+            }
+    
+            var previousStepElement = document.getElementById("step" + currentStep);
+            previousStepElement.style.display = "block";
+        }
+    
+        function submitForm() {
+            // Simulate form submission
+            var loadingMessage = document.createElement("p");
+            loadingMessage.innerText = "Submitting form...";
+            document.body.appendChild(loadingMessage);
+    
+            // Simulate asynchronous behavior (e.g., API call)
+            setTimeout(function () {
+                loadingMessage.remove();
+    
+                // Redirect to the dashboard after successful submission
+                alert("Form submitted successfully! Redirecting to the dashboard...");
+                window.location.href = "dashboardcust.html";
+            }, 2000); // Adjust the delay as needed
+        }
+    </script>
+    
             
 
         </main>
